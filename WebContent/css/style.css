@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: minecraft;
+	font-style:  normal;
+    font-weight: normal;
+	src: url(../common/font/Minecraft.ttf);
+}
+
+@font-face {
+	font-family: pixel;
+	font-style:  normal;
+    font-weight: normal;
+	src: url(../common/font/方正像素12.ttf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;	
+}
+
+body, html {
+	font-family: minecraft,pixel;
+	font-weight: 550px;
+	color: #353535;
+	background: #ebebeb;
+	display: block;
+	height: 100vh;
+	font-size: 14px;
+}
+
+.container {
+	display: block;
+	width: 90%;
+	max-width: 1140px;
+	margin: 30px auto;
+	background: white;
+	border-radius: 4px;
+	box-shadow: 0 18px 30px rgba(0,0,0,0.17);
+	position: relative;
+}
+
+.header{
+	height: 68px;
+	padding: 0 20px;
+}
+
+.logo{
+	line-height: 68px;
+	float: left;
+	color: #34495e;
+	text-transform: uppercase;
+}
+
+.menu {
+	float: right;
+	line-height: 68px;
+}
+
+.menu a {
+	color: #7f8c8d;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0 20px;
+	transition: 0.4s;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+	color: #3498db;
+}
+
+.show-menu-btn, .hide-menu-btn {
+	transition: 0.4s;
+	font-size: 30px;
+	cursor: pointer;
+	display: none;
+	color: #7f8c8d;
+}
+
+.show-menu-btn{
+	float: right;
+}
+
+.show-menu-btn i {
+	line-height: 68px;
+}
+
+#chk {
+	position: absolute;
+	visibility: hidden;
+	z-index: -1111;
+}
+
+@media screen and (max-width: 800px) {
+	.show-menu-btn, .hide-menu-btn {
+		display: block;
+	}
+	.menu{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #2c3e50;
+		right: -100%;
+		top: 0;
+		text-align: center;
+		padding: 80px 0;
+		line-height: normal;
+		transition: 0.7s;
+	}
+	.menu a {
+		display: block;
+		padding: 20px;
+	}
+	.hide-menu-btn {
+		position: absolute;
+		top: 40px;
+		right: 40px;
+	}
+	
+	#chk:checked ~ .menu {
+		right: 0;
+	}
+}
+
+/*微信二维码 by chrafz.com*/
+.navbar .right-part .btn{
+	display: inline;
+	position: relative;
+}
+
+.navbar .right-part .btn div{
+	left: -999em;
+	position: absolute;
+	overflow: visible;
+	padding-top: -27px;
+	width: 100px;
+	height: 100px;
+	z-index: 999;
+}
+
+.navbar .right-part .btn img{
+	margin-left: 0px;
+	width:98%;
+	height:auto;
+}
+
+.navbar .right-part .btn:hover div{
+	left: auto;
+}
+
+.footer {
+	height: 40px;
+	padding: 0 20px;
+}
+
+.footer p {
+	line-height: 40px;
+}
+
+.footer .footer-copyright {
+	float: left;
+	color: #7f8c8d;
+	transition: all 0.2s linear;
+}
+
+.footer .footer-version {
+	float: right;
+	font-size: 0.8125rem;
+	color: #d35400;
+	transition: all 0.2s linear;
+}

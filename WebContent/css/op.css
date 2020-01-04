@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+.content{
+	padding: 20px;
+	margin-top: 1px;
+	display: block;
+	box-sizing: border-box;
+	background: url(../static/images/Minecraft.jpg) repeat;
+	background-size: 100px 100px;
+}
+
+.clearfix:after {
+	content: '\20';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+.content ul{
+	padding: 0;
+	margin: 0;
+}
+
+.content ul li {
+	list-style: none;
+	float: left;
+	display: block;
+	width: 12.5%;
+	background: #fff;
+	margin: 20px 0px 0px 18px;
+	box-sizing: border-box;
+	border: 4px solid transparent;
+	border-image: url(../static/images/oak.png) 40 round;
+}
+
+.content ul li:hover {
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+.content ul li .title {
+	width: 100%;
+	height: 30px;
+	color: #7f8c8d;
+	line-height: 30px;
+	background: #fff;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.content ul li .avatar {
+	width: 100%;
+	height: auto;
+}
+
+.content ul li .bottom {
+	width: 100%;
+	line-height: 30px;
+	background: #fff;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap; 
+}
+
+@media screen and (max-width: 1140px){
+	.content ul li{
+		width: 20%;
+		margin-right: 18px;
+	}
+}
+
+
+@media screen and (max-width: 600px){
+	.content {
+		width: 100%;
+	}
+	.content ul li {
+		float: none;
+		width: 80%;
+		margin: 20px auto;;
+	}
+}
