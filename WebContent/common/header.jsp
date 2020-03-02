@@ -21,9 +21,10 @@
 		
 		<ul class="menu">
 			<a href="<%=basePath %>">首页</a>
-			<a href="#">About</a>
-			<a href="#">Services</a>
+			<a href="https://www.mcbbs.net/forum.php">论坛</a>
+			<a href="https://pan.baidu.com/">客户端</a>
 			<a href="<%=basePath %>/UserServlet">人员</a>
+			<a href="#">加入我们</a>
 			<label for="chk" class="hide-menu-btn">
 			  <i class="fas fa-times"></i>
 			</label>

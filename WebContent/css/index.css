@@ -5,7 +5,7 @@
 	background: url(../static/images/Minecraft.jpg) repeat;
 	background-size: 100px 100px;
 }
-.content img{
+.content .head-img{
 	width: 80%;
 	border: 10px solid transparent;
 	border-image: url(../static/images/oak.png) 40 round;
@@ -29,7 +29,7 @@
 	margin: 25px auto;
 	background: white;
 	font-weight: 300;
-	font-family: "minecraft";
+	font-family: "pixel";
 	font-style: italic;
 	font-size: 0.8125rem;
 	border: none;
@@ -46,4 +46,94 @@
 .content .btn.download-btn {
 	background: linear-gradient(-44deg, #ff7a00, #ee0979);
 	color: white;
+}
+
+.clearfix:after {
+	content: '\20';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+.content-box{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.hover-box{
+	width: 32%;
+	float: left;
+	margin: 0 5px;
+	overflow: hidden;
+	position: relative;
+	transition: all 0.4s linear 0s;
+	border-radius: 20px;
+	border: 2px solid #fff;
+}
+
+.hover-box:hover{
+	box-shadow: none;
+}
+
+.hover-box img {
+	width: 100%;
+	height: auto;
+	transform: scale(1.1, 1.1);
+	animation: breathe 5s linear 2s infinite;
+}
+
+.hover-box .hover-content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px 15px 0 15px;
+	background: rgba(15, 57, 234, 0.8);
+	transform: translateX(100%) translateY(-100%);
+	transition: all 0.5s ease-in-out 0s;
+}
+
+.hover-box:hover .hover-content {
+	transform: translateX(0%) translateY(0%);
+}
+
+.hover-box .hover-content h2,
+.hover-box .hover-content p{
+	color: white;
+	margin: 0 0 10px 0;
+	font-weight: 500;
+}
+
+.hover-box .hover-content h2{
+	font-size: 20px;
+	transform: translateX(-100%);
+	transition: all -.7s ease 0.5s;
+}
+
+.hover-box:hover .hover-content h2 {
+	transform: translateX(0%);
+}
+
+.hover-box .hover-content p{
+	opacity: 0;
+	font-size: 14px;
+	padding: 0 30px 0 0;
+	transform: translateY(300px);
+	transision: all 0.8s ease 0.7s;
+}
+
+.hover-box:hover .hover-content p {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@keyframs breath{
+	0%{transform: scale(1.1, 1.1);}
+	25%{transform: scale(1.2, 1.2);}
+	50%{transform: scale(1.3, 1.3);}
+	75%{transform: scale(1.2, 1.2);}
+	100%{transform: scale(1.1, 1.1);}
 }
